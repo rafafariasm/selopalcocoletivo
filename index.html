@@ -10,13 +10,12 @@
   <!-- HEADER -->
   <header>
     <div class="logo">
-      <img src="img/logo-oficial.jpg" alt="Selo Palco Coletivo" />
+      <img src="logo-oficial.jpg" alt="Selo Palco Coletivo">
     </div>
     <nav>
       <ul>
         <li><a href="#bio">Início</a></li>
         <li><a href="#bandas">Bandas</a></li>
-        <li><a href="#apoie">Apoie</a></li>
         <li><a href="#contato">Envie Seu Material</a></li>
         <li><a href="#historico">Histórico</a></li>
       </ul>
@@ -48,27 +47,33 @@
     <h2>Projetos do Mês</h2>
     <div class="carousel">
       <div class="carousel-track">
-        <div class="card" data-id="1">
+        <!-- Banda 1 -->
+        <div class="card" data-banda="1">
           <img src="img/slipknot.jpg" alt="Slipknot">
           <h3>Slipknot</h3>
         </div>
-        <div class="card" data-id="2">
+        <!-- Banda 2 -->
+        <div class="card" data-banda="2">
           <img src="img/banda2.jpg" alt="Madbong">
           <h3>Madbong</h3>
         </div>
-        <div class="card" data-id="3">
+        <!-- Banda 3 -->
+        <div class="card" data-banda="3">
           <img src="img/banda3.jpg" alt="Banda 3">
           <h3>Banda 3</h3>
         </div>
-        <div class="card" data-id="4">
+        <!-- Banda 4 -->
+        <div class="card" data-banda="4">
           <img src="img/banda4.jpg" alt="Banda 4">
           <h3>Banda 4</h3>
         </div>
-        <div class="card" data-id="5">
+        <!-- Banda 5 -->
+        <div class="card" data-banda="5">
           <img src="img/banda5.jpg" alt="Banda 5">
           <h3>Banda 5</h3>
         </div>
-        <div class="card" data-id="6">
+        <!-- Banda 6 -->
+        <div class="card" data-banda="6">
           <img src="img/banda6.jpg" alt="Banda 6">
           <h3>Banda 6</h3>
         </div>
@@ -78,13 +83,6 @@
       <button id="prev">←</button>
       <button id="next">→</button>
     </div>
-  </section>
-
-  <!-- APOIE -->
-  <section id="apoie" class="apoie">
-    <h2>Apoie Agora</h2>
-    <p>Chegou a hora de apoiar com atitude. Conheça a cena, apoie de verdade!</p>
-    <a href="#" class="btn">APOIAR</a>
   </section>
 
   <!-- CONTATO -->
@@ -103,6 +101,14 @@
   <footer>
     <p>© 2025 Selo Palco Coletivo | Underground Vive</p>
   </footer>
+
+  <!-- MODAL BANDA -->
+  <div id="bandaModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="bandaContent"></div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
