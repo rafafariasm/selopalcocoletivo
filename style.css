@@ -1,0 +1,456 @@
+/* Variáveis e estilos globais */
+:root {
+    --primary-color: #e91c05;
+    --primary-dark: #c91000;
+    --secondary-color: #222;
+    --text-color: #333;
+    --light-color: #fff;
+    --gray-color: #f8f8f8;
+    --dark-gray: #666;
+    --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-color);
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Header */
+header {
+    background-color: var(--light-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 120px 0 60px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Sections */
+section {
+    padding: 80px 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.sobre p {
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.destaque {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+/* Bandas Carrossel */
+.bandas {
+    background-color: var(--gray-color);
+}
+
+.bandasSwiper {
+    padding: 30px 0;
+}
+
+.swiper-slide {
+    height: auto;
+}
+
+.banda-card {
+    background-color: var(--light-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+}
+
+.banda-card:hover {
+    transform: translateY(-10px);
+}
+
+.banda-img {
+    height: 200px;
+    overflow: hidden;
+}
+
+.banda-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banda-info {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.banda-info h3 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.banda-info p {
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: var(--primary-dark);
+}
+
+.progresso-container {
+    margin-bottom: 20px;
+}
+
+.progresso-barra {
+    height: 10px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.progresso-preenchido {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+.progresso-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: var(--primary-color);
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--primary-color);
+}
+
+/* Regras */
+.regras-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.regra {
+    background-color: var(--light-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.regra:hover {
+    transform: translateY(-10px);
+}
+
+.regra-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.regra h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+/* Contato */
+.contato {
+    background-color: var(--gray-color);
+    text-align: center;
+}
+
+.contato p {
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    padding: 50px 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.footer-logo img {
+    height: 40px;
+}
+
+.footer-social a {
+    color: var(--light-color);
+    font-size: 1.5rem;
+    margin-left: 15px;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Página da Banda */
+.banda-profile {
+    padding-top: 120px;
+}
+
+.banda-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.banda-profile-img {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+.banda-profile-info {
+    flex: 2;
+    min-width: 300px;
+}
+
+.banda-profile-info h1 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.banda-profile-info p {
+    margin-bottom: 20px;
+}
+
+.banda-social {
+    margin-top: 20px;
+}
+
+.banda-social a {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: var(--dark-gray);
+    transition: color 0.3s;
+}
+
+.banda-social a:hover {
+    color: var(--primary-color);
+}
+
+.banda-video {
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.banda-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.banda-release {
+    margin-bottom: 30px;
+}
+
+.banda-release h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.apoiar-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.apoiar-section .btn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .regras-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-social {
+        margin-top: 20px;
+    }
+    
+    .footer-social a {
+        margin: 0 10px;
+    }
+    
+    .banda-header {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .banda-profile-img {
+        max-width: 100%;
+    }
+}
