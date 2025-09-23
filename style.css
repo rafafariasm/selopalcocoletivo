@@ -1,0 +1,422 @@
+:root {
+    --primary-color: #e91c05;
+    --secondary-color: #222;
+    --text-color: #333;
+    --light-color: #fff;
+    --gray-color: #f4f4f4;
+    --dark-gray: #666;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Header */
+header {
+    background-color: var(--light-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 120px 0 60px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Sections */
+section {
+    padding: 80px 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.sobre p {
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.destaque {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+/* Bandas Carrossel */
+.bandas {
+    background-color: var(--gray-color);
+}
+
+.bandasSwiper {
+    padding: 30px 0;
+}
+
+.banda-card {
+    background-color: var(--light-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+}
+
+.banda-card:hover {
+    transform: translateY(-10px);
+}
+
+.banda-img {
+    height: 200px;
+    overflow: hidden;
+}
+
+.banda-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banda-info {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.banda-info h3 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.banda-info p {
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #c91803;
+}
+
+/* Regras */
+.regras {
+    background-color: var(--light-color);
+}
+
+.regras-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.regra {
+    background-color: var(--gray-color);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.regra:hover {
+    transform: translateY(-5px);
+}
+
+.regra-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.regra h3 {
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+/* Contato */
+.contato {
+    background-color: var(--gray-color);
+    text-align: center;
+}
+
+.contato p {
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    padding: 50px 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.footer-logo img {
+    height: 40px;
+}
+
+.footer-social a {
+    color: var(--light-color);
+    font-size: 1.5rem;
+    margin-left: 15px;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Página Individual da Banda */
+.banda-profile {
+    padding-top: 100px;
+}
+
+.banda-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.banda-profile-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 30px;
+}
+
+.banda-profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banda-profile-info h1 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.banda-profile-info p {
+    margin-bottom: 20px;
+}
+
+.banda-video {
+    margin: 40px 0;
+}
+
+.banda-video iframe {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+}
+
+.banda-release {
+    background-color: var(--gray-color);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.banda-release h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.banda-social {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.banda-social a {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.banda-social a:hover {
+    transform: scale(1.2);
+}
+
+.apoiar-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.apoiar-section .btn {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .banda-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .banda-profile-img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .banda-video iframe {
+        height: 300px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .footer-logo {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+    
+    .regras-grid {
+        grid-template-columns: 1fr;
+    }
+}
