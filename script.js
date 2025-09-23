@@ -35,7 +35,7 @@ const bandas = {
     releaseBanda: "Slipknot é uma banda lendária do metal mundial...",
     releaseProjeto: "Este projeto busca apoiar a produção de um novo single pesado.",
     video: "https://www.youtube.com/embed/6fVE8kSM43I",
-    apoio: "#"
+    apoio: "https://www.catarse.me/primeiro_single_ilustracao_4a20?ref=project_link"
   },
   2: {
     nome: "Madbong",
@@ -107,4 +107,19 @@ window.addEventListener('click', (e) => {
   if (e.target == modal) {
     modal.style.display = "none";
   }
+});
+
+// BOTÃO VOLTAR AO TOPO
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    scrollTopBtn.style.display = "block";
+  } else {
+    scrollTopBtn.style.display = "none";
+  }
+});
+
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
