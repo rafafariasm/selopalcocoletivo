@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Selo Palco Coletivo</title>
+  <meta name="description" content="Selo Palco Coletivo — 6 bandas por mês. Apoie a cena independente." />
+  <link rel="icon" href="/logo-oficial.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <img src="/logo-oficial.png" alt="Logo Selo Palco Coletivo" class="logo" />
+      <div class="title-block">
+        <h1>SELO PALCO COLETIVO</h1>
+        <p class="subtitle">6 bandas por mês • Teto por projeto: R$600 • Apoie com atitude</p>
+      </div>
+    </div>
+  </header>
+
+  <main id="app">
+    <!-- HOME / LIST -->
+    <section id="home" class="container">
+      <div class="hero">
+        <h2>Essa cena respira — vamos empurrar ela pra frente.</h2>
+        <p class="lead">
+          O Selo Palco Coletivo seleciona 6 bandas por mês. Cada projeto tem teto de R$600 — um
+          impulso real: single, clipe, deslocamento para tour, merch. Organização é a alma do projeto.
+        </p>
+        <a class="btn primary" id="btn-submeter" href="#contact">Quero submeter um projeto</a>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title">Bandas do mês</h3>
+
+        <div class="carousel-wrap">
+          <button class="carousel-arrow left" id="arrow-left" aria-label="Anterior">‹</button>
+          <div class="carousel" id="carousel" role="list"></div>
+          <button class="carousel-arrow right" id="arrow-right" aria-label="Próximo">›</button>
+        </div>
+
+        <div class="carousel-footer">
+          <p class="small">Clique em uma banda para abrir a página do projeto.</p>
+        </div>
+      </div>
+
+      <div class="section rules">
+        <h3>Regras de participação</h3>
+        <ul>
+          <li>• Vagas: 6 bandas por mês — 1 projeto por banda.</li>
+          <li>• Envio: vídeo ≤1min (link YouTube/Drive), release do projeto em PDF, 1 foto, mini-release da banda e links digitais.</li>
+          <li>• Teto: R$600 por projeto.</li>
+          <li>• Tempo de exposição: 2 meses.</li>
+          <li>• Transferência: se meta for batida, valor enviado imediatamente; senão enviada a quantia arrecadada após 2 meses.</li>
+          <li>• Re-submissão: aguardar 1 mês antes de enviar novo projeto.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- BAND PAGE (rendered via JS) -->
+    <section id="band-page" class="container hidden">
+      <button class="btn ghost back" id="btn-back">← Voltar</button>
+
+      <div class="band-layout">
+        <div class="band-media">
+          <img id="band-photo" src="" alt="Foto da banda" />
+          <div class="support-block">
+            <a id="support-btn" class="btn primary wide" href="#" target="_blank" rel="noopener">Apoiar projeto</a>
+            <div class="small note">Direciona para Catarse / Apoia.se (ou link informado pela banda).</div>
+          </div>
+        </div>
+
+        <div class="band-content">
+          <h2 id="band-name">Nome da Banda</h2>
+          <div class="meta small" id="band-meta"></div>
+
+          <div class="card">
+            <h4>Mini release da banda</h4>
+            <p id="band-release"></p>
+          </div>
+
+          <div class="card">
+            <h4>Release do projeto</h4>
+            <p id="project-release"></p>
+          </div>
+
+          <div class="card video-card">
+            <h4>Vídeo - Pitch (≤1min)</h4>
+            <div class="video-wrapper">
+              <iframe id="band-video" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / SUBMISSION -->
+    <section id="contact" class="container">
+      <h3 class="section-title">Submeta seu projeto</h3>
+      <p class="small">Formato mínimo: link de vídeo (YouTube/Drive), PDF do release (coloque no Drive/WeTransfer), 1 foto e links das plataformas.</p>
+
+      <form id="submission-form" class="form">
+        <div class="form-row">
+          <label>Nome da banda</label>
+          <input type="text" id="s-band" required />
+        </div>
+        <div class="form-row">
+          <label>Título do projeto</label>
+          <input type="text" id="s-title" required />
+        </div>
+        <div class="form-row">
+          <label>Link do vídeo (YouTube)</label>
+          <input type="url" id="s-video" placeholder="https://youtube.com/watch?v=..." required />
+        </div>
+        <div class="form-row">
+          <label>Link do PDF (Drive/WeTransfer)</label>
+          <input type="url" id="s-pdf" placeholder="https://drive.google.com/..." required />
+        </div>
+        <div class="form-row">
+          <label>Link da foto (ou 'upload' depois)</label>
+          <input type="url" id="s-photo" placeholder="https://..." />
+        </div>
+        <div class="form-row">
+          <label>Resumo (máx 300 caracteres)</label>
+          <textarea id="s-summary" maxlength="300" rows="4" required></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn primary" type="submit">Enviar submissão</button>
+          <button class="btn ghost" type="button" id="btn-clear">Limpar</button>
+        </div>
+
+        <p class="small hint">Observação: GitHub Pages é estático — aqui o formulário prepara um e-mail com os dados para facilitar. Para uploads automáticos precisamos integrar Google Forms / Netlify / função serverless. Quer que eu integre?</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>© <span id="year"></span> Selo Palco Coletivo — Cena independente</div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
