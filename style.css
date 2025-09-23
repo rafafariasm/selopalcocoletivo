@@ -1,0 +1,155 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIÁVEIS */
+:root {
+  --vermelho: #e91c05;
+  --preto: #111;
+  --branco: #fff;
+  --cinza: #f4f4f4;
+}
+
+/* BODY */
+body {
+  font-family: Arial, sans-serif;
+  background: var(--cinza);
+  color: var(--preto);
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  background: var(--preto);
+  color: var(--branco);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo {
+  font-weight: bold;
+  color: var(--vermelho);
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header a {
+  text-decoration: none;
+  color: var(--branco);
+}
+
+header a:hover {
+  color: var(--vermelho);
+}
+
+/* SEÇÕES */
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.bio {
+  background: var(--vermelho);
+  color: var(--branco);
+  padding: 80px 20px;
+}
+
+.como-funciona .steps {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.como-funciona .step {
+  background: var(--vermelho);
+  color: var(--branco);
+  padding: 20px;
+  border-radius: 10px;
+  min-width: 150px;
+}
+
+/* CARROSSEL */
+.carousel {
+  overflow: hidden;
+  position: relative;
+  max-width: 90%;
+  margin: auto;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.card {
+  min-width: 300px;
+  margin: 10px;
+  background: var(--branco);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.card h3 {
+  padding: 15px;
+  color: var(--vermelho);
+}
+
+.carousel-buttons {
+  margin-top: 15px;
+}
+
+.carousel-buttons button {
+  padding: 10px 20px;
+  border: none;
+  background: var(--vermelho);
+  color: var(--branco);
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.carousel-buttons button:hover {
+  background: #b31303;
+}
+
+/* APOIE */
+.apoie .btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 30px;
+  background: var(--vermelho);
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.apoie .btn:hover {
+  background: #b31303;
+}
+
+/* FOOTER */
+footer {
+  background: var(--preto);
+  color: var(--branco);
+  padding: 20px;
+  text-align: center;
+}
