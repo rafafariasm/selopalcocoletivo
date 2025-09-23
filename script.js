@@ -4,21 +4,31 @@ const prev = document.getElementById('prev');
 const next = document.getElementById('next');
 let index = 0;
 
-next.addEventListener('click', () => {
-  if (index < track.children.length - 1) {
-    index++;
-    updateCarousel();
-  }
-});
+if (track) {
+  next.addEventListener('click', () => {
+    if (index < track.children.length - 1) {
+      index++;
+      updateCarousel();
+    }
+  });
 
-prev.addEventListener('click', () => {
-  if (index > 0) {
-    index--;
-    updateCarousel();
-  }
-});
+  prev.addEventListener('click', () => {
+    if (index > 0) {
+      index--;
+      updateCarousel();
+    }
+  });
 
-function updateCarousel() {
-  const cardWidth = track.children[0].offsetWidth + 20;
-  track.style.transform = `translateX(-${index * cardWidth}px)`;
+  function updateCarousel() {
+    const cardWidth = track.children[0].offsetWidth + 20;
+    track.style.transform = `translateX(-${index * cardWidth}px)`;
+  }
+
+  // CLICAR EM UMA BANDA → IR PARA PÁGINA DETALHE
+  document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('click', () => {
+      const id = card.getAttribute('data-id');
+      window.location.href = `banda.html?id=${id}`;
+    });
+  });
 }
