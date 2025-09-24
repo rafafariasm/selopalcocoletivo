@@ -24,11 +24,11 @@ if (track) {
     track.style.transform = `translateX(-${index * cardWidth}px)`;
   }
 
-  // CLICAR EM UMA BANDA → IR PARA PÁGINA DETALHE
+  // CLICAR EM UMA BANDA → IR PARA PÁGINA INDIVIDUAL DA BANDA
   document.querySelectorAll('.card').forEach(card => {
     card.addEventListener('click', () => {
       const id = card.getAttribute('data-banda');
-      window.location.href = `banda.html?id=${id}`;
+      window.location.href = `banda${id}.html`;
     });
   });
 }
