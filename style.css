@@ -11,6 +11,23 @@
   --preto: #111;
   --branco: #fff;
   --cinza: #f4f4f4;
+  --cor1: #fff;
+  --cor2: #f0f8ff;
+  --cor3: #e6e6fa;
+  --cor4: #f0ffff;
+}
+
+/* ANIMAÇÃO CAMALEÃO */
+@keyframes camaleao {
+  0% { color: var(--cor1); }
+  25% { color: var(--cor2); }
+  50% { color: var(--cor3); }
+  75% { color: var(--cor4); }
+  100% { color: var(--cor1); }
+}
+
+.camaleao {
+  animation: camaleao 8s infinite;
 }
 
 /* BODY */
@@ -48,6 +65,7 @@ header ul {
 header a {
   text-decoration: none;
   color: var(--branco);
+  animation: camaleao 8s infinite;
 }
 
 header a:hover {
@@ -119,6 +137,7 @@ section {
   display: none;
   z-index: 999;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  animation: camaleao 8s infinite;
 }
 
 .btn-topo:hover {
@@ -131,6 +150,7 @@ footer {
   color: var(--branco);
   padding: 20px;
   text-align: center;
+  animation: camaleao 8s infinite;
 }
 
 footer a {
@@ -153,6 +173,7 @@ footer a:hover {
   text-decoration: none;
   font-weight: bold;
   transition: background 0.3s;
+  animation: camaleao 8s infinite;
 }
 
 .btn-apoiar:hover {
