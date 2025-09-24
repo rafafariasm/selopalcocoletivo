@@ -23,19 +23,20 @@ body {
 
 /* HEADER */
 header {
-  background: var(--preto);
+  background: rgba(17, 17, 17, 0.85);
   color: var(--branco);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
+  padding: 10px 30px;
   position: sticky;
   top: 0;
   z-index: 1000;
+  backdrop-filter: blur(5px);
 }
 
 header .logo img {
-  height: 50px;
+  height: 40px;
 }
 
 header ul {
@@ -100,12 +101,150 @@ section {
   background: var(--branco);
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* BOTÃO VOLTAR AO TOPO */
+.btn-topo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--vermelho);
+  color: var(--branco);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  font-size: 20px;
   cursor: pointer;
+  display: none;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.btn-topo:hover {
+  background: #c91805;
+}
+
+/* FOOTER */
+footer {
+  background: var(--preto);
+  color: var(--branco);
+  padding: 20px;
+  text-align: center;
+}
+
+footer a {
+  color: var(--vermelho);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* BOTÃO APOIAR */
+.btn-apoiar {
+  display: inline-block;
+  background: var(--vermelho);
+  color: var(--branco);
+  padding: 10px 25px;
+  margin: 20px 0;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-apoiar:hover {
+  background: #c91805;
+}
+
+/* PÁGINA DA BANDA */
+.banda-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.banda-page img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.banda-page iframe {
+  width: 100%;
+  height: 400px;
+  margin: 20px 0;
+  border-radius: 10px;
+  border: 2px solid var(--vermelho);
+}
+
+/* PÁGINA HISTÓRICO */
+.historico-page {
+  padding: 50px 20px;
+}
+
+.historico-container {
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+.banda-historico {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  background: var(--branco);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.banda-historico img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.banda-info {
+  flex: 1;
+}
+
+/* PÁGINA ENVIE MATERIAL */
+.envie-material {
+  padding: 50px 20px;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 30px auto;
+  background: var(--branco);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.email {
+  font-size: 1.5em;
+  margin: 20px 0;
+}
+
+.instrucoes {
+  text-align: left;
+  margin-top: 30px;
+}
+
+.instrucoes ul {
+  margin-left: 20px;
+  margin-top: 10px;
 }
 
 .card img {
   width: 100%;
   border-radius: 10px 10px 0 0;
+  cursor: pointer;
 }
 
 .card h3 {
